@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>User Cards</title>
+  </head>
+  <body>
+    <div class="userdata">
+      <h1>Users Data</h1>
+    </div>
+    <div id="user-card-container" class="userdata">
+      <script>
+        try {
+          fetch("http://localhost:3001/users")
+            .then((Response) => Response.json())
+            .then((users) => {
+              const card_container = document.getElementById(
+                "user-card-container"
+              );
+              //console.log(card_container);
+              users.forEach((element) => {
+                const card = document.createElement("div");
+                card.className = "user-card";
+                card.innerHTML = `
+                <div class="card-content front-facing">
+                    <div class="image">
+                      <img src="images/web1.jpg" alt="developer photo">
+                    </div> 
+                    <div class="elements">
+                        <h2> ${element.id}</h2>
+                    </div> 
+                    <div class="elements">
+                        <h2> ${element.username}</h2>
+                    </div>
+                    <div class="elements">
+                        <p> ${element.email}</p>
+                    </div>   
+                  </div>
+                 
+                    `;
+
+                card_container.appendChild(card);
+                
+              });
+            });
+        } catch (error) {
+          console.error("Error:", error);
+        }
+
+       
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+-> react is js library
+-> the main focus is on building ui as fast as possible.
+-> used for building single page applications
+-> react use virtual dom -->viutual dom update only required list and real dom update complete list
+-> CDN => content delivery network
+-> why use npm => it provide us with facility to install different packages easily adn make a build of complete code which is not easy for others to understand that easily
+-> alternative for npm is yarn
+
+===> files and folder structure in react app
+
+- package.json: contains information about packages, name of the application , versions , different scripts ,dependencies and many more
+- package-lock.json : contains in detail information about package.json file contents like their history, version control, resolve, integrity and many more. It is more detailed then package.json file
+  -gitignore : the content we want to ignore while commiting the data
+  --> src folder
+  -components: contains all reusable components of our application
+  -pages: contains all pages or screens of our application
+  -public: static files like images, css etc which don't need any processing by webpack
+  -styles: contains global stylesheets (css)
+  -utils: utility functions/helpers
+  -App.js: this file loads first in from index.js
+  -index.js: where ReactDOM.render() lives and main file from this file our code starts executing entry point of our react application
+  -reportWebVitals: function that helps us analyze how our app performs and provide report of performance of our react app
+  -setuptests.js: a test setup file that Jest uses to run tests , from here all the testcases of all the testing file throughout the app is startup from here
+  --> public folder - contains html related data which are not related to react
+  -favicon.ico : icon of out title tab
+  -index.html : homepage of our website in this root id of our website is written so that we can select anything inside this div using document.querySelector("root") or in document.getElementById('root')
+  -manifest.json: it is meta file of the app it contains icon and themes and stuff like this The manifest. json provides information about a web application in a JSON text file, necessary for the web app to be downloaded and be presented to the user similarly to a native app (e.g., be installed on the homescreen of a device, providing users with quicker access and a richer experience).
+  -robots.txt: tells search engine about our website
+  --> node module folder - contails all about node like packeges
+
+------>the most important file of all hese is package.json
+
+===>>> Component in react js
+-a part or element of larger app that can be treated independently can contain other components
+-a piece of code that can reuse
+-such as function
+-but more powerful then function as it contains its states, its lifecycle, its maybe own html and style
+-ex header, footer , sidebar etc
+==> types of components
+-functional
+    function User1(){
+    return (
+    <h1>User Component</h1>
+    )
+    }
+    export default User1;
+-class
+-HOC(high order component)
+-pure component
+-controlled component
+-Uncontrolled component
+   
+
+
+   =======>>>>>npx - node package executor
+   ===> <></> fragment
+
+===> props : properties passed from parent to child component
+
+-you can access them using this.props inside the child component
+
