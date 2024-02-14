@@ -45,6 +45,7 @@ function App() {
               onCurrencyChange={(Currency) => setTo(Currency)}
               selectCurrency={to} ></InputBox>
             </div>
+            
             <div>
               <button type="submit" onClick={convert}>
                 Convert {from.toUpperCase()} to {to.toUpperCase()}
